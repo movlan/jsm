@@ -7,6 +7,7 @@ const schema = {
       name: 'title',
       title: 'Title',
       type: 'string',
+      require,
       validation: (Rule: any) => Rule.required(),
     },
     {
@@ -32,14 +33,18 @@ const schema = {
       title: 'Poster',
       type: 'image',
       validation: (Rule: any) => Rule.required(),
-      options: { hotspot: true },
+      options: {
+        hotspot: true,
+      },
     },
     {
       name: 'category',
       title: 'Category',
       type: 'string',
       validation: (Rule: any) => Rule.required(),
-      options: { list: ['next 13', 'frontend', 'backend', 'fullstack', 'other'] },
+      options: {
+        list: ['frontend', 'backend', 'next 13', 'fullstack', 'other'],
+      },
     },
   ],
 };
